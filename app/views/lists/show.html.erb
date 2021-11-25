@@ -1,0 +1,11 @@
+<h1> hahahahahahah </h1>
+
+<div class="whatever">
+  <% @list.movies.each do |movie| %>
+    <li><%= movie.title %></li>
+    <li><%= movie.overview %></li>
+    <li><%= movie.rating %></li>
+  <% end %>
+
+  <%= link_to "Add a movie", @new_list_bookmark_path, class: "btn btn-dark" %>
+</div>

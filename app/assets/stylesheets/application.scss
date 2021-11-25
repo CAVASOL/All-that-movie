@@ -11,3 +11,36 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// My font from Google
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,500&family=Merriweather:wght@300;700;900&family=Permanent+Marker&display=swap');
+
+
+body {
+  background-color: #FCE83A;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: lighter;
+}
+
+
+.banner {
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.card {
+  height: 200px;
+  margin: 24px;
+  // background-color: red;
+  .card-img {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  p {
+    font-size: 48px;
+  }
+}

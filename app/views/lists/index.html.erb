@@ -1,0 +1,38 @@
+<nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Favs</a>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <%= link_to "Search", "#", class: "btn btn-outline-info m-2" %>
+    <%= link_to "My List", lists_path, class: "btn btn-outline-dark" %>
+  </form>
+</nav>
+
+
+
+
+<div class="container">
+
+<h3>All lists :</h3>
+
+
+<table>
+  <tr>
+    <th>NAME</th>
+
+    <th>DELETE</th>
+  </tr>
+  <% @lists.each do |list| %>
+    <tr>
+      <td><%= link_to list.name, list_path(list) %></td>
+      <td><%= link_to "X", list_path(list), method: :delete, class: "text-danger", data: { confirm: "Are you sure?"} %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<div class="input-group">
+  <input type="text" class="form-control p-4" placeholder="List name" aria-describedby="button-addon4">
+  <div class="input-group-append" id="button-addon4">
+    <%= link_to "Add a List", new_list_path, class: "btn btn-outline-secondary" %>
+  </div>
+</div>

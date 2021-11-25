@@ -10,46 +10,42 @@ class BookmarksController < ApplicationController
 
   # review.controller
   def new
-    @restaurant = Restaurant.find(params[:restaurant_id])
-    @review = Review.new
+    @list = List.find(params[:list_id])
+    @bookmark = Bookmark.new
   end
 
   def create
-    @review = Review.new(review_params)
-    resto_id = params[:restaurant_id]
-    @restaurant = Restaurant.find(resto_id)
-    @review.restaurant = @restaurant
-    if @review.save
-      redirect_to restaurant_path(@restaurant)
+    @bookmark = Bookmark.new(bookmark_params)
+    list_id = params[:list_id]
+    @list = List.find(list_id)
+    @bookmark.list = @list
+    if @bookmark.save
+      redirect_to list_path(@list)
     else
       render 'new'
     end
   end
 
-  # ""         I can see update a new resto
-  # def edit; end
-
-  def update
-    if @review.update(review_params)
-      redirect_to restaurant_path(@restaurant)
-    else
-      render 'edit'
-    end
-  end
+  # def update
+  #   if @bookmark.update(bookmark_params)
+  #     redirect_to movie_path(@movie)
+  #   else
+  #     render 'edit'
+  #   end
+  # end
 
   def destroy
-    @review.destroy
-    redirect_to restaurant_path(@review.restaurant)
+    @bookmark.destroy
+    redirect_to list_path(@bookmark.list)
   end
 
   private
 
-  def review_params
-    params.require(:review).permit(:content, :rating)
+  def bookmark_params
+    params.require(:bookmark).permit(:comment, :list_id, :movie_id)
   end
 
-  def set_review
-    @review = Review.find(params[:id])
+  def set_bookmark
+    @bookmark = Bookmark.find(params[:id])
   end
-
 end

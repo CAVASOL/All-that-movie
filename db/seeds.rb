@@ -4,4 +4,22 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first)ß
+require 'faker'
+
+
+
+10.times do
+  Movie.create(
+    title: Faker::Movie.title,
+    overview: Faker::Movie.quote,
+    poster_url: Net::HTTP.get_response(URI('https://source.unsplash.com/featured/?poster'))['location'],
+    rating: rand(1..10)
+  )
+end
+
+5.times do
+  List.create(
+    name: Faker::Book.genre
+  )
+end
