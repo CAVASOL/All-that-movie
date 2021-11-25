@@ -2,13 +2,13 @@
 
 # app/controller/bookmarks_controller.rb
 class BookmarksController < ApplicationController
-  before_action :set_bookmark, only: [:show, :edit, :update, :destroy]
+  before_action :set_bookmark, only: [:destroy]
+  before_action :set_list, only: %i[new create]
 
   def index
     @bookmarks = Bookmark.all
   end
 
-  # review.controller
   def new
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
@@ -27,14 +27,6 @@ class BookmarksController < ApplicationController
     end
   end
 
-  # def update
-  #   if @bookmark.update(bookmark_params)
-  #     redirect_to movie_path(@movie)
-  #   else
-  #     render 'edit'
-  #   end
-  # end
-
   def destroy
     @bookmark.destroy
     redirect_to list_path(@bookmark.list)
@@ -43,10 +35,14 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:comment, :list_id, :movie_id)
+    params.require(:bookmark).permit(:comment, :movie_id)
   end
 
   def set_bookmark
     @bookmark = Bookmark.find(params[:id])
+  end
+
+  def set_list
+    @lsit = List.find(params[:list_id])
   end
 end

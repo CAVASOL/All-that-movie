@@ -2,7 +2,7 @@
 
 # app/controller/lists_controller.rb
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: %i[show destroy]
 
   def index
     @lists = List.all
@@ -12,7 +12,10 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-  def show; end
+  def show
+    @bookmark = Bookmark.new
+    @review = Review.new(list: @list)
+  end
 
   def create
     @list = List.new(list_params)
@@ -23,18 +26,10 @@ class ListsController < ApplicationController
     end
   end
 
-  # def update
-  #   if @bookmark.update(bookmark_params)
-  #     redirect_to movie_path(@movie)
-  #   else
-  #     render 'edit'
-  #   end
-  # end
-
-  # def destroy
-  #   @list.destroy
-  #   redirect_to list_path(@list.bookmark)
-  # end
+  def destroy
+    @list.destroy
+    redirect_to lists_path
+  end
 
   private
 

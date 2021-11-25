@@ -1,9 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// My font from Google
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,500&family=Merriweather:wght@300;700;900&family=Permanent+Marker&display=swap');
+
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: 'Permanent Marker', cursive;
+$headers-font: 'Permanent Marker', cursive;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
