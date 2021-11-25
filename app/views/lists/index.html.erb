@@ -6,13 +6,13 @@
 <div class="container py-5">
   <div class="d-flex align-items-center mb-3">
     <h3 class="mb-0 mr-3"> All My Lists (<%= @lists.length %>) </h3>
-    <%= link_to 'Add a list', new_list_path, class: 'btn btn-dark' %>
+    <%= link_to 'Add a list', new_list_path, class: 'btn btn-secondary' %>
   </div>
   <div class="row">
     <% @lists.each do |list| %>
       <div class="co-12 colsm-6 col-md-4 mt-2 ml-3 mb-3 mr-1">
         <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+          <div class="card-category" data-aos="zoom-in">
             <%= list.name %>
           </div>
         <% end %>
@@ -20,5 +20,3 @@
     <% end %>
   </div>
 </div>
-
-<%# url(<%= asset_path('list_background.jpg') %>
