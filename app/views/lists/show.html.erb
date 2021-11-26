@@ -1,6 +1,6 @@
 <div class="position-relative">
   <% if @list.photo.attached? %>
-    <div class="card-category card-large" style="background: url('<%= cl_image_path @list.photo.key %>')">
+    <div class="card-category card-large" style="background-image: url('<%= cl_image_path @list.photo.key %>')">
       <h1><%= @list.name %></h1>
     </div>
   <% else %>
