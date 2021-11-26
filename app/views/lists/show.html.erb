@@ -1,8 +1,14 @@
 <div class="position-relative">
-  <div class="card-category card-large">
-    <h1><%= @list.name %></h1>
-  </div>
-    <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
+  <% if @list.photo.attached? %>
+    <div class="card-category card-large" style="background: url('<%= cl_image_path @list.photo.key %>')">
+      <h1><%= @list.name %></h1>
+    </div>
+  <% else %>
+    <div class="card-category" data-aos="zoom-in">
+      <%= @list.name %>
+    </div>
+  <% end %>
+  <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
 </div>
 <div class="container mb-5">
   <div class="d-flex justify-content-between my-4">

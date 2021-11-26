@@ -13,9 +13,15 @@
       <div class="col-4 ">
         <div class="mt-2 ml-3 mb-3 mr-3">
           <%= link_to list_path(list), class:'text-decoration-none' do %>
-            <div class="card-category" data-aos="zoom-in">
-              <%= list.name %>
-            </div>
+            <% if list.photo.attached? %>
+              <div class="card-category" data-aos="zoom-in" style="background: url('<%= cl_image_path list.photo.key %>')">
+                <%= list.name %>
+              </div>
+            <% else %>
+              <div class="card-category" data-aos="zoom-in">
+                <%= list.name %>
+              </div>
+            <% end %>
           <% end %>
         </div>
       </div>
