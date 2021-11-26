@@ -2,7 +2,7 @@
 
 # app/controller/bookmarks_controller.rb
 class BookmarksController < ApplicationController
-  before_action :set_bookmark, only: [:destroy]
+  before_action :set_bookmark, only: [:destroy, :edit, :update]
   before_action :set_list, only: %i[new create]
 
   def index
@@ -13,6 +13,16 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
     @movies = Movie.all
+  end
+
+  def edit; end
+
+  def update
+    if @bookmark.update(bookmark_params)
+      redirect_to list_path(@bookmark)
+    else
+      render 'edit'
+    end
   end
 
   def create
