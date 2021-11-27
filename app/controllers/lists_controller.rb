@@ -8,10 +8,21 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
-
   def new
     @list = List.new
   end
+
+# def search
+#  @movies = movie.where(title: params[:query])
+#   url = `https://www.imdb.com/find?q=#{query}&ref_=nv_sr_sm`
+#   movies = JSON.parse(open("#{query}?page=1").read)['results']
+#   movies.each do |movie|
+#     base_poster_url = `https://www.imdb.com/find?q=#{query}&ref_=nv_sr_sm`
+#     Movie.create(
+#       title: movie['title']
+#     )
+#   end
+# end
 
   def show
     @bookmark = Bookmark.new
