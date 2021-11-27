@@ -5,7 +5,7 @@
     </div>
   <% else %>
     <div class="card-category" data-aos="zoom-in">
-      <%= @list.name %>
+      <h1><%= @list.name %></h1>
     </div>
   <% end %>
   <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
