@@ -12,8 +12,18 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 1px;
+  border-radius: 8px;
 }
 
 .card-large {
   height: 30vh;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
 }
