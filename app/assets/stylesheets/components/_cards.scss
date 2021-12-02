@@ -1,8 +1,9 @@
 .card-category {
   background-image: url('cinema8.jpeg');
+  background-color: #8f1115;
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,5 +27,16 @@
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  height: 560px;
+  height: 480px;
+  border-radius: 20px;
+}
+
+.search-card {
+  display: flex;
+  justify-content: center;
+  width: 420px;
+  height: 320px;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  margin: 20px;
 }
