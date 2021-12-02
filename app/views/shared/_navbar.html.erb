@@ -13,9 +13,11 @@
         <%= link_to "New list", new_list_path, class: "nav-link" %>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <%= link_to "Search", "#", class: "btn btn-light" %>
+
+
+    <form class="form-inline my-2 my-lg-0" action="/search">
+      <input class="form-control mr-sm-2" name="search" placeholder="Search" aria-label="Search">
+      <input type="submit" >
     </form>
   </div>
 </nav>

@@ -12,17 +12,23 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-# def search
-#  @movies = movie.where(title: params[:query])
-#   url = `https://www.imdb.com/find?q=#{query}&ref_=nv_sr_sm`
-#   movies = JSON.parse(open("#{query}?page=1").read)['results']
-#   movies.each do |movie|
-#     base_poster_url = `https://www.imdb.com/find?q=#{query}&ref_=nv_sr_sm`
-#     Movie.create(
-#       title: movie['title']
-#     )
-#   end
-# end
+  def search
+    if param[:query].present?
+      # @movies = Movie.where("title ILIKE ?", "%#{params[:query]}%")
+      url = "http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7"
+      movies = JSON.parse(open(url).read)['Search']
+      movies.each do |movie|
+        Movie.create(
+          title: movie['Title'],
+          poster_url: movie['Poster']
+        )
+      end
+
+      @movies = Movie.last(movies.length)
+    end
+  end
+
+
 
   def show
     @bookmark = Bookmark.new

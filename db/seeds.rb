@@ -8,6 +8,7 @@
 require 'faker'
 require 'open-uri'
 require 'json'
+require 'yaml'
 
 puts 'Cleaning up database...'
 Movie.destroy_all
