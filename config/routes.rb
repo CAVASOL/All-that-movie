@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   resources :movies, only: :index
   resources :lists, except: %i[edit update] do
     resources :bookmarks, only: %i[new create]
+    resources :reviews, only: :create
   end
-  resources :bookmarks, only: [:destroy,  :edit,   :update]
+  resources :bookmarks, only: [:destroy, :edit, :update]
+  resources :reviews, only: :destroy
 
   get "search", to: "movies#search"
 end

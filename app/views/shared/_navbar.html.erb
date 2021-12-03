@@ -3,10 +3,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+
     <%= form_tag movies_path, method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a movie" %>
-      <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
+      <div class="whatever d-flex">
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a movie" %>
+        <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
+      </div>
     <% end %>
+
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
