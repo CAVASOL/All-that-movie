@@ -17,12 +17,6 @@ class MoviesController < ApplicationController
           overview: Faker::Movie.quote,
           rating: rand(1..10)
         )
-
-        if m.valid?
-          m.save
-        end
-
-        m
       end
     else
       @movies = Movie.all
