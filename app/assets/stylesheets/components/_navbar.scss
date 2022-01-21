@@ -8,6 +8,13 @@
 }
 
 .nav-link {
-  color: #ece9e3;
+  color: #FFFFFF;
   text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
+  opacity: 2;
+  transition: all 0.5s;
 }
