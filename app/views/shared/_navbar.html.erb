@@ -6,7 +6,7 @@
 
     <%= form_tag movies_path, method: :get do %>
       <div class="whatever d-flex">
-        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a movie" %>
+        <%= text_field_tag :query, params[:query], class: "form-control mr-3", placeholder: "Find a movie" %>
         <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
       </div>
     <% end %>
