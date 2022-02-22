@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
       movies = JSON.parse(body)['Search']
 
       @movies = movies.map do |movie|
-        m = Movie.new(
+        Movie.new(
           title: movie['Title'],
           poster_url: movie['Poster'],
           overview: Faker::Movie.quote,
