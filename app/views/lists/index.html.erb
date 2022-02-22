@@ -40,26 +40,26 @@
 </div>
 
 <%# list-card %>
-<div class="container py-2">
+<div class="container">
   <div class="d-flex align-items-center mr-5 mb-3">
     <h3 class="title mr-3"> All My Lists (<%= @lists.length %>) </h3>
   </div>
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-4 ">
-        <div class="mt-2 ml-3 mb-3 mr-3">
-          <%= link_to list_path(list), class:'text-decoration-none' do %>
-            <% if list.photo.attached? %>
-              <div class="card-category" data-aos="zoom-in" style="background-image: url('<%= cl_image_path list.photo.key %>')">
-                <%= list.name %>
-              </div>
-            <% else %>
-              <div class="card-category" data-aos="zoom-in">
-                <%= list.name %>
-              </div>
-            <% end %>
+
+        <%= link_to list_path(list), class:'text-decoration-none' do %>
+          <% if list.photo.attached? %>
+            <div class="card-category" data-aos="zoom-in" style="background-image: url('<%= cl_image_path list.photo.key %>')">
+              <%= list.name %>
+            </div>
+          <% else %>
+            <div class="card-category" data-aos="zoom-in">
+              <%= list.name %>
+            </div>
           <% end %>
-        </div>
+        <% end %>
+
       </div>
     <% end %>
   </div>
