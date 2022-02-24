@@ -2,12 +2,11 @@
 <div class="cover align-items-center justify-content-center">
   <div class="text-center text-white">
     <%= form_tag movies_path, method: :get do %>
-      <div class="whatever d-flex">
-        <%= text_field_tag :query, params[:query], class: "form-control mr-3", placeholder: "Find a movie" %>
-        <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
+      <div class="search">
+        <%= text_field_tag :query, params[:query], class: "index-search", placeholder: "Search Movie" %>
+        <%# <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
       </div>
     <% end %>
-
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <%= link_to "My list", lists_path, class: "btn btn-outline-light mr-3" %>

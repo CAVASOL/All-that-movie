@@ -16,8 +16,9 @@
 // }
 
 .topnav {
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
+  width: 100vw;
 }
 
 /* Style the links inside the navigation bar */
@@ -26,20 +27,20 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #AB3024;
   color: black;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #AB3024;
   color: white;
 }
 

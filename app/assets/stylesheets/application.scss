@@ -12,10 +12,16 @@
 @import "components/index";
 @import "pages/index";
 
-body {
+body, html {
+  height: 100%;
   background-color: #aa1d24;
+  margin: 0;
 }
 
-.title {
-  color: #ece9e3;
+.bg {
+  background-image: url("cover.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
