@@ -1,12 +1,7 @@
-// Import Google fonts
-// My font from Google
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,500&family=Merriweather:wght@300;700;900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Tajawal:wght@300;400;700&display=swap');
 
-
-// Define fonts for body and headers
-$body-font: 'Permanent Marker', cursive;
-$headers-font: 'Permanent Marker', cursive;
-
+$body-font: 'DM Serif Display', serif;
+$headers-font: 'Tajawal', sans-serif;
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
