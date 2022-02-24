@@ -3,15 +3,14 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-// import Rails from "@rails/ujs"
-// import Turbolinks from "turbolinks"
-// import * as ActiveStorage from "@rails/activestorage"
-// import "channels"
-import 'bootstrap';
+import Rails from "@rails/ujs"
+import Turbolinks from "turbolinks"
+import * as ActiveStorage from "@rails/activestorage"
+import "channels"
 
-// Rails.start()
-// Turbolinks.start()
-// ActiveStorage.start()
+Rails.start()
+Turbolinks.start()
+ActiveStorage.start()
 
 require("@rails/ujs").start()
 require("turbolinks").start()
@@ -26,10 +25,14 @@ require("channels")
 // import { initSelect2 } from './plugins/init_select2';
 // import { initStarRating } from './plugins/init_star_rating';
 
+import 'bootstrap';
+import { myFunction } from "./topnav"
+
 
 document.addEventListener('turbolinks:load', () => {
   // // initSelect2();
   // initTyped();
   // AOS.init();
   // initStarRating();
+  myFunction();
 });
