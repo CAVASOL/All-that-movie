@@ -8,16 +8,12 @@
 </div>
 
 <div class="container">
-  <div class="d-flex align-items-center m-3">
-    <h3 class="list-title mr-3"> All My Lists (<%= @lists.length %>) </h3>
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <%= link_to "My list", lists_path, class: "btn btn-outline-light mr-3" %>
-    </li>
-    <li class="nav-item mr-3">
-      <%= link_to "New list", new_list_path, class: "btn btn-outline-light" %>
-    </li>
-  </ul>
+  <div class="index-title d-flex align-items-center m-3">
+    <h3 class="list-title"> All My Lists (<%= @lists.length %>) </h3>
+  </div>
+  <div class="buttons">
+    <%= link_to "My list", lists_path, class: "btn btn-outline-light mr-3" %>
+    <%= link_to "New list", new_list_path, class: "btn btn-outline-light" %>
   </div>
   <div class="row">
     <% @lists.each do |list| %>
