@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "config/shared";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -16,12 +17,4 @@ body, html {
   height: 100%;
   background-color: #aa1d24;
   margin: 0;
-}
-
-.bg {
-  background-image: url("cover.jpeg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }

@@ -1,27 +1,23 @@
-<%# banner %>
-<div class="cover align-items-center justify-content-center">
-  <div class="text-center text-white">
-    <%= form_tag movies_path, method: :get do %>
-      <div class="search">
-        <%= text_field_tag :query, params[:query], class: "index-search", placeholder: "Search Movie" %>
-        <%# <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
-      </div>
-    <% end %>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "My list", lists_path, class: "btn btn-outline-light mr-3" %>
-      </li>
-      <li class="nav-item mr-3">
-        <%= link_to "New list", new_list_path, class: "btn btn-outline-light" %>
-      </li>
-    </ul>
-  </div>
+<div class="banner">
+  <%= form_tag movies_path, method: :get do %>
+    <div class="search">
+      <%= text_field_tag :query, params[:query], class: "index-search", placeholder: "Search Movie" %>
+      <%# <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
+    </div>
+  <% end %>
 </div>
 
-<%# list-card %>
 <div class="container">
-  <div class="d-flex align-items-center mr-5 mb-3">
-    <h3 class="title mr-3"> All My Lists (<%= @lists.length %>) </h3>
+  <div class="d-flex align-items-center m-3">
+    <h3 class="list-title mr-3"> All My Lists (<%= @lists.length %>) </h3>
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <%= link_to "My list", lists_path, class: "btn btn-outline-light mr-3" %>
+    </li>
+    <li class="nav-item mr-3">
+      <%= link_to "New list", new_list_path, class: "btn btn-outline-light" %>
+    </li>
+  </ul>
   </div>
   <div class="row">
     <% @lists.each do |list| %>

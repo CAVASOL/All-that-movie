@@ -1,3 +1,11 @@
+.banner {
+  background-image: url("cover.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .search {
   display: flex;
   justify-content: center;
@@ -10,4 +18,8 @@
   margin: 56px;
   text-decoration: none;
   padding-left: 32px;
+  border: 0;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 17px;
+  padding-bottom: 0;
 }
