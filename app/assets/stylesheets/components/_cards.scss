@@ -1,14 +1,38 @@
-.card-category {
+.index-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 10px;
+}
+
+.list-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+.lists {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-row: auto;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
+
+.list-card {
   background-image: url('cinema8.jpeg');
   background-color: #8f1115;
   background-size: cover;
   background-position: center;
-  height: 200px;
+  width: 240px;
+  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 32px;
+  font-size: 17px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
