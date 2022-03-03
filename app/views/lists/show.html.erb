@@ -2,12 +2,12 @@
 <%# banner %>
 <div class="position-relative">
   <% if @list.photo.attached? %>
-    <div class="card-category card-large" style="background-image: url('<%= cl_image_path @list.photo.key %>')">
+    <div class="listname card-large" style="background-image: url('<%= cl_image_path @list.photo.key %>')">
       <h1 class="list-name"><%= @list.name %></h1>
       <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
     </div>
   <% else %>
-    <div class="card-category" data-aos="zoom-in">
+    <div class="listname" data-aos="zoom-in">
       <h1 class="list-name"><%= @list.name %></h1>
       <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
     </div>
@@ -15,11 +15,11 @@
 </div>
 
 <div class="container mb-5">
-  <div class="d-flex justify-content-between my-4">
+  <div class="d-flex justify-content-between mt-4">
     <span class="mb-2 d-block"><em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em></span>
     <div>
-      <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'btn btn-outline-light' %>
-      <%= link_to 'Detete this list', list_path(@list), method: :delete, class: 'btn btn-outline-light', data: { confirm: 'Are you sure you want to delete this list?' } %>
+      <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'bbb btn btn-outline-light' %>
+      <%= link_to 'Detete this list', list_path(@list), method: :delete, class: 'bbb btn btn-outline-light', data: { confirm: 'Are you sure you want to delete this list?' } %>
     </div>
   </div>
 
