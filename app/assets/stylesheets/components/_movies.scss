@@ -1,19 +1,32 @@
-.movie-img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 20px 20px 0 0;
+.search-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 8px 16px;
 }
 
-.search-img {
+.search-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-card {
   width: 160px;
   height: 240px;
+
+  & .search-img {
+  width: 160px;
+  height: 200px;
   object-fit: cover;
   object-position: center;
-  // border-radius: 20px 0 0 20px;
-}
+  border-radius: 8px;
+  }
 
-.text-muted {
-  color: white !important;
+  & p {
+  font-size: 12px;
+  text-align: center;
+  }
 }

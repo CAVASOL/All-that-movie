@@ -1,7 +1,7 @@
 <div class="banner">
   <%= form_tag movies_path, method: :get do %>
     <div class="search">
-      <%= text_field_tag :query, params[:query], class: "index-search", placeholder: "Search Movie" %>
+      <%= text_field_tag :query, params[:query], class: "index-search", placeholder: "Search Your Favorite Movie?" %>
       <%# <%= submit_tag "Search", class: "btn btn-outline-light mr-3" %>
     </div>
   <% end %>

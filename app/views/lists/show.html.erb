@@ -7,22 +7,21 @@
       <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
     </div>
   <% else %>
-    <div class="listname" data-aos="zoom-in">
+    <div class="listname">
       <h1 class="list-name"><%= @list.name %></h1>
       <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
     </div>
   <% end %>
 </div>
 
-<div class="container mb-5">
-  <div class="d-flex justify-content-between mt-4">
-    <span class="mb-2 d-block"><em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em></span>
-    <div>
-      <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'bbb btn btn-outline-light' %>
-      <%= link_to 'Detete this list', list_path(@list), method: :delete, class: 'bbb btn btn-outline-light', data: { confirm: 'Are you sure you want to delete this list?' } %>
-    </div>
-  </div>
+<div class="list-button">
+  <%= link_to 'Add a movie', new_list_bookmark_path(@list), class: 'bbbb btn btn-outline-light' %>
+  <%= link_to 'Detete this list', list_path(@list), method: :delete, class: 'bbb btn btn-outline-light', data: { confirm: 'Are you sure you want to delete this list?' } %>
+</div>
 
+<em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em>
+
+<div class="container mb-5">
   <div class="row my-2">
     <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
