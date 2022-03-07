@@ -1,16 +1,16 @@
-<div class="search-container m-3 p-3">
-  <h2 class="search-title ml-5"> Found <strong><%= @movies.length %></strong> movies </h2>
+<div class="search-container p-2">
+  <h2 class="search-title"> Found <strong><%= @movies.length %></strong> movies! </h2>
   <div class="row">
     <% @movies.each do |movie| %>
-      <%# <div class="col-4" data-aos="zoom-in"> %>
+      <div class="col-4" data-aos="zoom-in">
         <div class="search-card">
           <%= image_tag movie.poster_url, alt: movie.title, class: 'search-img' %>
           <div class="card-body">
             <p class="card-text"><%= movie.title %></p>
           </div>
-          <%# <%= link_to "Add to my list", "#", class: "btn btn-outline-dark" %>
+          <%= link_to "Add to my list", "#", class: "btn btn-outline-dark" %>
         </div>
-      <%# </div> %>
+      </div>
     <% end %>
   </div>
 </div>

@@ -54,12 +54,28 @@
   border-radius: 20px;
 }
 
+.search-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.search-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  grid-gap: 16px;
+  // flex-grow: 1;
+}
+
 .search-card {
-  width: 240px;
-  height: 320px;
-  background-color: blanchedalmond;
-  border-radius: 20px;
-  margin: 20px;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
