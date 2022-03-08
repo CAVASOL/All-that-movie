@@ -6,7 +6,7 @@
 }
 
 .search-container {
-  padding: 10px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -14,19 +14,36 @@
 }
 
 .search-card {
-  width: 160px;
-  height: 240px;
+  // border: 1px solid black;
+  // border-radius: 4px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
-  & .search-img {
+.card-body {
   width: 160px;
+  height: 220px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-img {
+  width: 140px;
   height: 200px;
   object-fit: cover;
   object-position: center;
-  border-radius: 8px;
-  }
+  border-radius: 4px;
+  margin: 0px;
+}
 
-  & p {
-  font-size: 12px;
-  text-align: center;
-  }
+.card-body .fa-solid {
+  position: absolute;
+  top: 12%;
+  left: 64%;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
 }

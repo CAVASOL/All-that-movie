@@ -5,11 +5,7 @@
       <div class="search-card" data-aos="zoom-in">
         <div class="card-body">
           <%= image_tag movie.poster_url, alt: movie.title, class: 'search-img' %>
-          <% if movie.title.length < 15 %>
-            <p class="card-text"><%= movie.title %></p>
-          <% else %>
-            <p class="card-text"><%= movie.title.first(10)... %></p>
-          <% end %>
+          <button class="btn"><i class="fa-solid fa-circle-plus"></i></button>
         </div>
         <%# <%= link_to "Add to my list", "#", class: "btn btn-outline-dark" %>
       </div>
